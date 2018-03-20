@@ -21,12 +21,13 @@ function buttons () {
 
 
 
-
+// Then make a function call that takes each 
+// topic in the array remakes the buttons on the page.
 buttons();
 
 // when user clicks button, page grabs 10 static, non-nanimated gif images 
 // from GIPHY API and places them on the page
-$("button").click(function(){
+$(document).on("click", "button", function(){
     var topic = $(this).attr("data-options");
     var queryUrl = "https://api.giphy.com/v1/gifs/search?q=" +
      topic + "&api_key=IKuRboJlJrxsfjPPSIqlWK0o2K28wlcJ&limit=10";
@@ -93,8 +94,7 @@ $(document).on('click',"#add-topic",function(){
     buttons();
 });
 
-// Then make a function call that takes each 
-// topic in the array remakes the buttons on the page.
+
 
 
 

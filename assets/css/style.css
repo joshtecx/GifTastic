@@ -1,0 +1,52 @@
+body {
+    background: url(../images/space1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+label {
+    color:  #6CC417;
+    padding: 10px;
+    font-size: 30px;
+    background: rgba(93, 4, 176, .6);
+    
+}
+
+form {
+    text-align: center;
+}
+
+p {
+    color:  #6CC417;
+    
+}
+
+.topicButtons{
+    font-size: 20px;
+    margin: 10px;
+}
+
+.gif {
+    
+}
+
+#buttons {
+    text-align: center;
+    padding: 30px;
+    
+}
+
+#topic-input {
+    margin: 10px;
+    font-size: 20px;
+}
+
+#add-topic {
+    margin: 10px;
+    font-size: 20px;
+}
+
+#showGifs {
+    text-align: center;
+    padding: 20px;
+}

@@ -56,24 +56,7 @@ $(document).on("click", "button", function(){
             newGif.prepend(p);
             newGif.prepend(gifImage);
             $("#showGifs").prepend(newGif);
-
-
-            // when user clicks a still giphy image, the gif will animate
-            // when user clicks again, image will stop
-
-            // !!! BUG...CLICK ONLY WORKS ON EVERY OTHER GIF !!!
-            $(".gif").click(function(){
-                console.log("does this work?")
-                var status = $(this).attr("data-status");
             
-                if (status === "still"){
-                    $(this).attr("src", $(this).attr("data-animate"));
-                    $(this).attr("data-status", "animate");
-                } else {
-                    $(this).attr("src", $(this).attr("data-still"));
-                    $(this).attr("data-status", "still");
-                }
-            });
 
         }
 
@@ -81,7 +64,22 @@ $(document).on("click", "button", function(){
     });
     
 
+});
 
+
+// when user clicks a still giphy image, the gif will animate
+// when user clicks again, image will stop
+$(document).on("click", ".gif", function(){
+    console.log("does this work?")
+    var status = $(this).attr("data-status");
+
+    if (status === "still"){
+        $(this).attr("src", $(this).attr("data-animate"));
+        $(this).attr("data-status", "animate");
+    } else {
+        $(this).attr("src", $(this).attr("data-still"));
+        $(this).attr("data-status", "still");
+    }
 });
 
 // Form takes a topic and adds it into your topics array.
@@ -92,6 +90,7 @@ $(document).on('click',"#add-topic",function(){
     console.log(topics);
     $("#buttons").empty();
     buttons();
+    $("#topic-input").val('');
 });
 
 
